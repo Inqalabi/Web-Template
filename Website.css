@@ -17,6 +17,7 @@
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #ffffff;
+    --multi-color: #10ff00;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     background-color: var(--nav-color);
     height:100%;
     color:var(--text-color) ;
-
+    font-family: Helvetica, Arial, Georgia, Tahoma and Roboto;
 
 }
 
@@ -34,6 +35,7 @@ body.dark {
     --side-nav: #242526;
     --text-color: rgb(255, 255, 255);
     --search-bar: #242526;
+    --multi-color: #ff0000;
 }
 
 nav {
@@ -44,6 +46,7 @@ nav {
     width: 100%;
     background-color: var(--nav-color);
     z-index: 100;
+ 
 }
 
 
@@ -63,6 +66,10 @@ nav .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.nav-bar span img{
+  height: 150px;
 }
 
 nav .nav-bar .sidebarOpen {
@@ -330,11 +337,17 @@ body.dark .search-field i {
     align-items: center;
     margin-top: 10px;
 }
-
+@font-face {
+  font-family:myFont;
+  src: url(../TAqi/Lato-Black.ttf);
+}
 .detail {
     color: var(--text-color);
+    font-family:myFont;
 }
-
+.detail span{
+  color: var(--multi-color);
+}
 .detail h1 {
     margin: 15px 0px;
 }
@@ -369,7 +382,7 @@ body.dark .search-field i {
     inset: -10px 70px;
     background: linear-gradient(315deg, #ff0000, #ff0000);
     transition: 0.5s;
-    animation: animate 4s linear infinite;
+    animation: animat 4s linear infinite;
 
 }
 
@@ -378,7 +391,7 @@ body.dark .search-field i {
 
 }
 
-@keyframes animate {
+@keyframes animat {
     0% {
         transform: rotate(0deg);
     }
@@ -609,24 +622,29 @@ body.dark .search-field i {
 /* Text Repetation  End  */
 
 .icons {
+  width: 40%;
     margin: auto;
     display: flex;
     justify-content: center;
+    padding-bottom:  10px;
+    border-bottom: 1px solid white;
+    border-bottom: double;
 }
 
 .icons img {
-    margin: 0px 8px;
-    border: 1px solid rgb(128, 0, 0);
+  height: 35px;
+    margin: 0px 5px;
     border-radius: 50%;
-    padding: 3px;
-    background-color: white;
+    padding: 5px;
+   
 }
 
 .icons img:hover {
-    border: 1px solid rgb(255, 0, 0);
-    border-radius: 50%;
-    padding: 10px;
-    background-color: #2f3fff;
+  height: 40px;
+  border: 1px solid white;
+  transition: 0.5s;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 /* Home End*/
@@ -665,18 +683,18 @@ body.dark .search-field i {
     position: relative;
   }
   .card img{
-    height: 90px;
+    height: 55px;
     position: relative;
-    top: -50px;
+    top: -30px;
   }
   .card h2{
     position: relative;
-    top: -40px;
+    top: -20px;
     font-size: medium;
   }
   .card p{
     position: relative;
-    top: -40px;
+    top: -10px;
     font-size: small;
     margin: 5px;
     color: var(--body-color);
@@ -839,12 +857,11 @@ body.dark .search-field i {
 	animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
 }
 
-
-/* @keyframes animate {
+ @keyframes animate {
 	100%{
 		width: 100%;
 	}
-} */
+} 
 
 .progress-line::after{
 	content: '';
@@ -888,10 +905,11 @@ body.dark .search-field i {
 }
 footer{
     position: relative;
-    background: #140B5C;
+    background: var(--nav-color);
     width: 100%;
     bottom: 0;
     left: 0;
+
     
   }
   footer::before{
@@ -901,7 +919,7 @@ footer{
     top: 100px;
     height: 1px;
     width: 100%;
-    background: #AFAFB6;
+    background: var(--nav-color);
   }
   footer .CONTANT{
     max-width: 1250px;
@@ -922,52 +940,26 @@ footer{
     display: flex;
   }
   .CONTANT .top .media-icons a{
-    height: 40px;
-    width: 40px;
+   
     margin: 0 8px;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
-    color: #fff;
     font-size: 17px;
     text-decoration: none;
     transition: all 0.4s ease;
+  } 
+  .media-icons img{
+    height: 30px;
   }
-  .top .media-icons a:nth-child(1){
-    background: #4267B2;
+  .media-icons img:hover{
+    height: 35px;
+    border: 1px solid white;
+    transition: 0.5s;
+    border-radius: 50%;
+    padding: 5px;
   }
-  .top .media-icons a:nth-child(1):hover{
-    color: #4267B2;
-    background: #fff;
-  }
-  .top .media-icons a:nth-child(2){
-    background: #1DA1F2;
-  }
-  .top .media-icons a:nth-child(2):hover{
-    color: #1DA1F2;
-    background: #fff;
-  }
-  .top .media-icons a:nth-child(3){
-    background: #E1306C;
-  }
-  .top .media-icons a:nth-child(3):hover{
-    color: #E1306C;
-    background: #fff;
-  }
-  .top .media-icons a:nth-child(4){
-    background: #0077B5;
-  }
-  .top .media-icons a:nth-child(4):hover{
-    color: #0077B5;
-    background: #fff;
-  }
-  .top .media-icons a:nth-child(5){
-    background: #FF0000;
-  }
-  .top .media-icons a:nth-child(5):hover{
-    color: #FF0000;
-    background: #fff;
-  }
+
   footer .CONTANT .link-boxes{
     width: 100%;
     display: flex;
@@ -1016,7 +1008,7 @@ footer{
     width: calc(100% + 55px);
     outline: none;
     border: 2px solid #AFAFB6;
-    background: #140B5C;
+    background: var(--nav-color);
     border-radius: 4px;
     padding: 0 15px;
     font-size: 15px;
