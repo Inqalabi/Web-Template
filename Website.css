@@ -705,13 +705,13 @@ body.dark .search-field i {
 
 .card h2 {
   position: relative;
-  top: -20px;
+  top: -40px;
   font-size: medium;
 }
 
 .card p {
   position: relative;
-  top: -10px;
+  top: -40px;
   font-size: small;
   margin: 5px;
   color: var(--body-color);
