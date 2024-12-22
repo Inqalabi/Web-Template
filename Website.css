@@ -61,7 +61,7 @@ nav {
 nav .nav-bar {
   position: relative;
   height: 100%;
-  max-width: 1000px;
+  max-width: 100%;
   width: 100%;
   background-color: var(--nav-color);
   margin: 0 auto;
@@ -716,7 +716,7 @@ body.dark .search-field i {
 
 .about-image img {
   height: 110vh;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .about-image img:hover {
@@ -725,11 +725,11 @@ body.dark .search-field i {
 }
 
 .about-box-A {
-  height: 96vh;
-  width: 35%;
+  height: 98vh;
+  width: 60vw;
   margin: 5px;
+  overflow: hidden;
 }
-
 .about-box-B {
   margin-top: 100px;
   height: 65vh;
@@ -1163,6 +1163,8 @@ body.dark .search-field i {
   background:var(--nav-color);
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
+  justify-content: center;
+  margin: auto;
 }
 .container-1 .content-1 {
   display: flex;
